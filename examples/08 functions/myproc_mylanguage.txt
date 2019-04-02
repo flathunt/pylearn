@@ -1,0 +1,11 @@
+int mynumber := 99;
+
+call myproc(mynumber);
+
+echo mynumber;  				' does this print 99 or 100?
+
+
+procedure myproc(int x) 
+BEGIN
+   x := x + 1;
+END   

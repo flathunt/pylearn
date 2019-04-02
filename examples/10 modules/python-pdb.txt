@@ -1,0 +1,16 @@
+$ python -mpdb script.py
+
+
+...
+(Pdb) 
+
+l(ist)
+ll/longlist
+b(reak) lineno
+
+s(tep)
+n(ext) [ steps over function calls ]
+c(ontinue)
+q(uit)
+
+type python code to run as per >>>

@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Python36-32\Tools\Scripts\pydoc3.py" -p 1234

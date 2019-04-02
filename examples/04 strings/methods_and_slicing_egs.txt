@@ -1,0 +1,117 @@
+﻿>>> print('\u263A')
+☺
+>>> print('\u260e')
+☎
+
+>>> msg = 'The cat sat on the mat.'
+
+>>> msg.upper()
+'THE CAT SAT ON THE MAT'
+
+>>> 'some string'.upper()
+'SOME STRING'
+
+
+>>> msg.replace('cat', 'aardvark')
+'The aardvark sat on the mat'
+
+>>> msg.replace('at', '**')
+'The c** s** on the m**.'
+
+>>> msg.replace('at', '**', 1)
+'The c** sat on the mat.'
+>>>
+
+
+>>> msg.find('cat')
+4
+
+>>> msg[0]
+'T'
+
+>>> msg[-2]
+'t'
+
+>>> msg[4:7]
+'cat'
+
+>>> msg[:7]
+'The cat'
+
+>>> msg[:7] + msg[7:]
+'The cat sat on the mat.'
+
+>>> msg[:7]
+'The cat'
+>>> msg[4:7]
+'cat'
+>>> msg[4:]
+'cat sat on the mat.'
+
+>>> msg[4::2]
+'ctsto h a.'
+
+>>> msg[4:7:2]
+'ct'
+
+>>> msg[-4:-1]
+'mat'
+
+>>> words = msg.split()
+
+>>> words
+['The', 'cat', 'sat', 'on', 'the', 'mat.']
+
+>>> three_things = msg.split(maxsplit=2)
+
+>>> three_things
+['The', 'cat', 'sat on the mat.']
+
+>>> result = ':'.join(words)
+>>>
+>>> result
+'The:cat:sat:on:the:mat.'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
