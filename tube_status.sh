@@ -25,10 +25,10 @@ then
     setterm --term linux --background=black --foreground=white > /dev/tty1
   done
   i=1
-  while [ "$i" -lt "15" ]
+  while [ "$i" -lt "31" ]
   do
     echo "" > /dev/tty1
-    sleep 4
+    sleep 2
     i=$((i+1))
   done
 fi
