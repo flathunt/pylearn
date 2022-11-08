@@ -15,9 +15,10 @@ then
       District|district)	fg=white; bg=green;;
       *)			fg=white; bg=black;;
     esac
-    sudo setterm --term linux --background=$bg --foreground=$fg --bold on  < /dev/tty1
+    sudo setterm --term linux --background=$bg --foreground=$fg  < /dev/tty1
+    echo "" > /dev/tty1
     echo "$line $rest" > /dev/tty1
-    sudo setterm --term linux --background=black --foreground=white --bold off < /dev/tty1
+    sudo setterm --term linux --background=black --foreground=white < /dev/tty1
   done
   i=1
   while [ "$i" -lt "24" ]
