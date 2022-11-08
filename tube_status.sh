@@ -1,6 +1,6 @@
 #!/bin/bash
 
-setterm --term linux --blank=1 < /dev/tty1
+setterm --term linux --blank=2 < /dev/tty1
 trap "setterm --term linux --cursor on < /dev/tty1 ; exit" 2
 
 curl https://api.tfl.gov.uk/Line/district,northern,piccadilly,central/Disruption 2> /dev/null | jq -r '.[] | .description' > /tmp/tubestatus.out
@@ -31,5 +31,7 @@ then
     sleep 2
     i=$((i+1))
   done
+else
+  setterm --term linux --blank=1 < /dev/tty1
 fi
 setterm --term linux --cursor on < /dev/tty1
