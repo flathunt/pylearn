@@ -1,6 +1,7 @@
 #!/bin/bash
 
-trap "sudo setterm --linux --cursor on < /dev/tty1 ; exit" 2
+sudo setterm --term linux --blank=1 < /dev/tty1
+trap "sudo setterm --term linux --cursor on < /dev/tty1 ; exit" 2
 
 curl https://api.tfl.gov.uk/Line/district,northern,piccadilly,central/Disruption 2> /dev/null | jq -r '.[] | .description' > /tmp/tubestatus.out
 
