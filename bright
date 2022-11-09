@@ -1,0 +1,2 @@
+echo 1 > /sys/class/leds/led1/brightness
+echo 120 > /sys/class/backlight/10-0045/brightness
