@@ -22,7 +22,7 @@ do
         Piccadilly|piccadilly)	fg=white; bg=blue;;
         Central|central)	fg=white; bg=red;;
         Northern|northern)	fg=black; bg=white;;
-        District|district)	fg=white; bg=green;;
+        District|district)	fg=black; bg=green;;
         *)			fg=white; bg=black;;
       esac
       setterm --term linux --background=$bg --foreground=$fg
