@@ -7,7 +7,6 @@ setterm --term linux --blank=force
 sudo /usr/local/bin/dim
 while :
 do
-  #curl https://api.tfl.gov.uk/Line/district,northern,central/Disruption 2> /dev/null | jq -r '.[] | .description' > /tmp/tubestatus.out
   curl https://api.tfl.gov.uk/Line/district,northern,piccadilly,central/Disruption 2> /dev/null | jq -r '.[] | .description' > /tmp/tubestatus.out
   
   if [ -s /tmp/tubestatus.out ]
@@ -16,7 +15,7 @@ do
     setterm --term linux --blank 0
     setterm --term linux --cursor off
     printf "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-    cat /tmp/tubestatus.out | while read line rest
+    cat /tmp/tubestatus.out | sort -u | while read line rest
     do
       case "$line" in
         Piccadilly|piccadilly)	fg=white; bg=blue;;
@@ -31,7 +30,7 @@ do
       setterm --term linux --background=black --foreground=white
     done
     i=1
-    while [ "$i" -lt "31" ]
+    while [ "$i" -lt "29" ]
     do
       echo ""
       sleep 2
