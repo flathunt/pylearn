@@ -37,8 +37,8 @@ do
       i=$((i+1))
     done
   else
-    setterm --term linux --blank 1
-    setterm --term linux --cursor on
+    setterm --term linux --cursor off
+    setterm --term linux --blank=force
     sleep 30
   fi
 done
