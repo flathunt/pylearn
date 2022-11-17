@@ -8,7 +8,7 @@ sudo /usr/local/bin/dim
 while :
 do
   . /home/marcusc/git/pylearn/lines.txt
-  curl https://api.tfl.gov.uk/Line/$TUBELINES/Disruption 2> /dev/null | jq -r '.[] | .description' > /tmp/tubestatus.out
+  curl https://api.tfl.gov.uk/$TUBELINES/Disruption 2> /dev/null | jq -r '.[] | .description' > /tmp/tubestatus.out
   
   if [ -s /tmp/tubestatus.out ]
   then
