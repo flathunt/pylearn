@@ -19,10 +19,10 @@ do
     cat /tmp/tubestatus.out | sort -u | while read line rest
     do
       case "$line" in
-        Piccadilly|piccadilly)	fg=white; bg=blue;;
-        Central|central)	fg=white; bg=red;;
-        Northern|northern)	fg=black; bg=white;;
-        District|district)	fg=black; bg=green;;
+        PICCADILLY|Piccadilly|piccadilly)	fg=white; bg=blue;;
+        CENTRAL|Central|central)	fg=white; bg=red;;
+        NORTHERN|Northern|northern)	fg=black; bg=white;;
+        DISTRICT|District|district)	fg=black; bg=green;;
         *)			fg=white; bg=black;;
       esac
       setterm --term linux --background=$bg --foreground=$fg
