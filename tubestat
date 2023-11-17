@@ -3,7 +3,7 @@
 
 tfile=/tmp/tubestatus.$$
 
-trap "sudo /usr/local/bin/bright ; setterm --term linux --cursor on ; setterm -term linux --blank 1 ; setterm --term linux --blank=poke ; rm $tfile ; exit" 2
+trap "sudo /usr/local/bin/bright ; setterm --term linux --cursor on 2>/dev/null ; setterm -term linux --blank 1 2>/dev/null ; setterm --term linux --blank=poke 2>/dev/null ; rm $tfile ; exit" 2
 
 setterm --term linux --blank=force 2>/dev/null
 sudo /usr/local/bin/dim
